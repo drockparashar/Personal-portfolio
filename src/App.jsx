@@ -1,13 +1,13 @@
 import './App.css'
 import Hero from './Hero'
-import Projects from './projects'
+import Projects from './Projects'
 
 
 function App() {
 
   return (
     <>
-      <Hero/>
+      <Hero />
       <Projects></Projects>
     </>
   )
