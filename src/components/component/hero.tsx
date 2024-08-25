@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Github, Linkedin, Twitter } from "lucide-react"
 
 export function Hero() {
   return (
@@ -17,18 +18,32 @@ export function Hero() {
           <p className="text-lg sm:text-xl md:text-2xl text-gray-300 max-w-md mx-auto lg:mx-0">
             I'm a passionate designer and developer who specializes in creating beautiful and functional web experiences.
           </p>
+          <div className="flex space-x-6">
+              <Link href="https://github.com/drockparashar" target="_blank" className="text-white ">
+                <Github className="h-10 w-10" />
+                <span className="sr-only">GitHub</span>
+              </Link>
+              <Link href="https://www.linkedin.com/in/pranshu-parashar-443859249/" target="_blank" className="text-white ">
+                <Linkedin className="h-10 w-10" />
+                <span className="sr-only">LinkedIn</span>
+              </Link>
+              <Link href="https://x.com/PranshuParasha4" target="_blank" className="text-white ">
+                <Twitter className="h-10 w-10" />
+                <span className="sr-only">Twitter</span>
+              </Link>
+            </div>
           <div className="flex flex-col sm:flex-row justify-center lg:justify-start gap-4 mt-4">
-            <Link
-              href="#portfolio"
-              className="inline-flex items-center justify-center px-6 py-3 bg-blue-600 text-white text-sm font-medium rounded-md shadow-lg hover:bg-blue-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition"
-            >
-              View Portfolio
-            </Link>
-            <Link
+          <Link
               href="#contact"
               className="inline-flex items-center justify-center px-6 py-3 bg-gray-800 border border-gray-700 text-gray-100 text-sm font-medium rounded-md shadow-lg hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 transition"
             >
               Contact Me
+            </Link>
+            <Link
+              href="#portfolio"
+              className="inline-flex items-center justify-center px-6 py-3 bg-blue-600 text-white text-sm font-medium rounded-md shadow-lg hover:bg-blue-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition"
+            >
+              Download Resume
             </Link>
           </div>
         </div>
