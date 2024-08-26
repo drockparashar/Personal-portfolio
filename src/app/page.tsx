@@ -3,7 +3,7 @@
 import { Hero } from "@/components/component/hero";
 import { Landing } from "@/components/component/landing";
 import Image from "next/image";
-import Carousel from "@/components/component/projectSection";
+import CardCarousel from "@/components/component/projectSection";
 
 export default function Home() {
   return (
@@ -11,7 +11,10 @@ export default function Home() {
       // <Landing/>
       <>
         <Hero/>
-        <Carousel/>
+        <CardCarousel
+        speed={500}
+        direction="left"
+      />
       </>
     
   );
