@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { Github, Linkedin, Twitter } from "lucide-react"
+import Image from "next/image";
+import { Github, Linkedin, Twitter } from "lucide-react";
 
 export function Hero() {
   return (
@@ -13,27 +14,27 @@ export function Hero() {
         {/* Text Content */}
         <div className="w-full lg:w-1/2 text-center lg:text-left space-y-6">
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-gray-100">
-            Hi, I'm Pranshu Parashar
+            Hi, I&apos;m Pranshu Parashar
           </h1>
           <p className="text-lg sm:text-xl md:text-2xl text-gray-300 max-w-md mx-auto lg:mx-0">
-            I'm a passionate designer and developer who specializes in creating beautiful and functional web experiences.
+            I&apos;m a passionate designer and developer who specializes in creating beautiful and functional web experiences.
           </p>
           <div className="flex space-x-6">
-              <Link href="https://github.com/drockparashar" target="_blank" className="text-white ">
-                <Github className="h-10 w-10" />
-                <span className="sr-only">GitHub</span>
-              </Link>
-              <Link href="https://www.linkedin.com/in/pranshu-parashar-443859249/" target="_blank" className="text-white ">
-                <Linkedin className="h-10 w-10" />
-                <span className="sr-only">LinkedIn</span>
-              </Link>
-              <Link href="https://x.com/PranshuParasha4" target="_blank" className="text-white ">
-                <Twitter className="h-10 w-10" />
-                <span className="sr-only">Twitter</span>
-              </Link>
-            </div>
+            <Link href="https://github.com/drockparashar" target="_blank" className="text-white">
+              <Github className="h-10 w-10" />
+              <span className="sr-only">GitHub</span>
+            </Link>
+            <Link href="https://www.linkedin.com/in/pranshu-parashar-443859249/" target="_blank" className="text-white">
+              <Linkedin className="h-10 w-10" />
+              <span className="sr-only">LinkedIn</span>
+            </Link>
+            <Link href="https://x.com/PranshuParasha4" target="_blank" className="text-white">
+              <Twitter className="h-10 w-10" />
+              <span className="sr-only">Twitter</span>
+            </Link>
+          </div>
           <div className="flex flex-col sm:flex-row justify-center lg:justify-start gap-4 mt-4">
-          <Link
+            <Link
               href="#contact"
               className="inline-flex items-center justify-center px-6 py-3 bg-gray-800 border border-gray-700 text-gray-100 text-sm font-medium rounded-md shadow-lg hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 transition"
             >
@@ -51,10 +52,10 @@ export function Hero() {
         {/* Image Content */}
         <div className="w-full lg:w-1/2 flex justify-center lg:justify-end mt-8 lg:mt-0">
           <div className="relative w-72 h-72 sm:w-96 sm:h-96 rounded-full overflow-hidden shadow-lg">
-            <img
+            <Image
               src="/image.jpg"
-              width="550"
-              height="550"
+              width={550}
+              height={550}
               alt="Hero"
               className="object-cover rounded-full"
             />
