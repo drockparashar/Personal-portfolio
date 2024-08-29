@@ -1,8 +1,8 @@
 "use client";
 
-import React, { useRef } from 'react';
-import Slider from 'react-slick';
-import CardDemo from './project';  // Ensure this path is correct
+import React, { useRef } from "react";
+import Slider from "react-slick";
+import CardDemo from "./project"; // Ensure this path is correct
 
 const CardCarousel = ({
   cards = [], // Default to an empty array if cards are not provided
@@ -100,15 +100,17 @@ const CardCarousel = ({
 
   return (
     <div className="relative pb-12">
-      {/* Gradient Background */}
-      <div className="absolute inset-0 z-0 bg-white dark:bg-black bg-grid-black/[0.2] dark:bg-grid-white/[0.2]" />
+      {/* Seamless Gradient Background */}
+      <div className="absolute inset-0 z-0 bg-white dark:bg-black bg-[length:32px_32px] bg-grid-dark/[0.15] dark:bg-grid-white/[0.15]" />
       
       {/* Heading */}
-      <h2 className="text-3xl font-bold text-center my-6 text-gray-800 dark:text-gray-200 relative z-10 pt-5">Projects</h2>
-      
+      <h2 className="text-6xl font-bold text-center my-6 text-gray-800 dark:text-gray-200 relative z-10 pt-5 pb-5">
+        Projects
+      </h2>
+
       {/* Gradient and Blur Background */}
       <div className="absolute inset-0 z-20 bg-gradient-to-b from-transparent to-black backdrop-blur-md opacity-50" />
-      
+
       <Slider {...settings} ref={sliderRef} className="relative z-30">
         {effectiveCards.map((card, index) => (
           <div key={index} className="px-4">
@@ -123,7 +125,7 @@ const CardCarousel = ({
           </div>
         ))}
       </Slider>
-      
+
       {/* Left Arrow */}
       <button
         className="absolute top-1/2 left-2 transform -translate-y-1/2 p-2 bg-gray-700 text-white rounded-full hover:bg-gray-600 z-40"
@@ -131,7 +133,7 @@ const CardCarousel = ({
       >
         &#10094;
       </button>
-      
+
       {/* Right Arrow */}
       <button
         className="absolute top-1/2 right-2 transform -translate-y-1/2 p-2 bg-gray-700 text-white rounded-full hover:bg-gray-600 z-40"
